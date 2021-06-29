@@ -1,4 +1,4 @@
-# Nuxt Lighthouse Module
+# Nuxt Build Slack Notifier
 
 This module provides a simple Slack notification of your deployment after success.
 
