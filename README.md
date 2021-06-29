@@ -30,7 +30,7 @@ module.exports = {
 };
 ```
 
-This module is being disabled by default, and must be explicitly enable by setting the `LIGHTHOUSE_ENABLED` environment variable to `true`.
+This module is being disabled by default, and must be explicitly enable by setting the `SLACK_NOTFIER_ENABLED` environment variable to `true`.
 
 ## Options
 
