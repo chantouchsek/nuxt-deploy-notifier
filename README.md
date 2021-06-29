@@ -39,7 +39,6 @@ The following options are available:
 ### `slackWebhookUrl`
 
 - Type: `string`
-- Default: `null`
 - Required: `true`
 
 The webhook url to send the Slack notification to your channel of choice. For information on how to setup a webhook, check out the [Slack Documentation](https://api.slack.com/messaging/webhooks). If no value is supplied, no notification will be sent.
