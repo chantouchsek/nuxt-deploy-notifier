@@ -21,7 +21,7 @@ export default async function NuxtBuildSlackNotifierModule(moduleOptions = {}) {
         return;
     }
 
-    this.nuxt.hook('ready', () => {
+    this.nuxt.hook('build:done', () => {
         (new SlackBuildNotifierModule({
             context: this,
             options,
