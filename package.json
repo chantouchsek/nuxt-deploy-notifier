@@ -1,0 +1,31 @@
+{
+    "name": "nuxt-build-slack-notifier",
+    "version": "0.0.1",
+    "main": "index.js",
+    "license": "MIT",
+    "repository": "https://github.com/chantouchsek/nuxt-build-slack-notifier",
+    "homepage": "https://github.com/chantouchsek/nuxt-build-slack-notifier",
+    "author": {
+        "name": "Chantouch Sek",
+        "email": "chantouchsek.cs83@gmail.com",
+        "url": "https://chantouch.me"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "chalk": "^4.1.1",
+        "chalk-table": "^1.0.2",
+        "consola": "^2.15.3"
+    },
+    "devDependencies": {
+        "@netsells/eslint-config": "^3.7.0",
+        "babel-eslint": "^10.1.0",
+        "nuxt": "^2.15.7"
+    },
+    "files": [
+        "lib/**/*",
+        "index.js"
+    ],
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/"
+    }
+}
