@@ -41,6 +41,12 @@ export default {
 
 The following options are available:
 
+### `APP_URL`
+
+- Type: `string`
+- Required: `true`
+- Description: `Set this from .env file`
+
 ### `appName`
 
 - Type: `string`
