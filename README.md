@@ -1,6 +1,5 @@
 # Nuxt Build Notifier
 
-[![Build Status](https://travis-ci.com/chantouchsek/nuxt-deploy-notifier.svg?branch=master)](https://travis-ci.com/chantouchsek/nuxt-deploy-notifier)
 [![Latest Version on NPM](https://img.shields.io/npm/v/nuxt-deploy-notifier.svg?style=flat-square)](https://npmjs.com/package/nuxt-deploy-notifier)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 [![npm](https://img.shields.io/npm/dt/nuxt-deploy-notifier.svg?style=flat-square)](https://npmjs.com/package/nuxt-deploy-notifier)
