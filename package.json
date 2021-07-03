@@ -1,10 +1,10 @@
 {
-    "name": "nuxt-build-slack-notifier",
+    "name": "nuxt-deploy-notifier",
     "version": "0.0.1",
     "main": "index.js",
     "license": "MIT",
-    "repository": "https://github.com/chantouchsek/nuxt-build-slack-notifier",
-    "homepage": "https://github.com/chantouchsek/nuxt-build-slack-notifier",
+    "repository": "https://github.com/chantouchsek/nuxt-build-notifier",
+    "homepage": "https://github.com/chantouchsek/nuxt-build-notifier",
     "author": {
         "name": "Chantouch Sek",
         "email": "chantouchsek.cs83@gmail.com",

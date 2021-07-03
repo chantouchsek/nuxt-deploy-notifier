@@ -1,30 +1,43 @@
-const SlackBuildNotifierModule = require('./lib/SlackBuildNotifierModule');
+const SlackBuildNotifierModule = require('./SlackBuildNotifierModule');
 
 /**
  * Setup the module.
  *
  * @param {object} moduleOptions
  */
-export default async function NuxtBuildSlackNotifierModule(moduleOptions = {}) {
+export default function NuxtBuildSlackNotifierModule(moduleOptions = {}) {
     const options = {
-        slackWebhookUrl: null,
+        slackWebhookUrl: process.env.SLACK_WEBHOOK_URL,
         ...moduleOptions,
-        ...this.options.slackNotifier || { slackWebhookUrl: null },
+        ...(this.options.deployNotifiers || {
+            slackWebhookUrl: process.env.SLACK_WEBHOOK_URL,
+        }),
     };
 
-    if (
-        process.env.SLACK_NOTFIER_ENABLED !== 'true'
-        || this.options.dev
-        || this.options._build
-        || !options.slackWebhookUrl
-    ) {
+    const { slackWebhookUrl, appName, slackChannel } = options;
+
+    if (this.options.dev || !slackWebhookUrl || !appName || !slackChannel) {
         return;
     }
 
-    this.nuxt.hook('build:done', () => {
-        (new SlackBuildNotifierModule({
-            context: this,
-            options,
-        })).run();
+    const slackNotifier = new SlackBuildNotifierModule({
+        options,
+        context: this,
     });
-};
+
+    this.nuxt.hook('build:before', async () => {
+        await slackNotifier.before();
+    });
+
+    this.nuxt.hook('build:done', async () => {
+        await slackNotifier.done();
+    });
+
+    this.nuxt.hook('generate:before', async () => {
+        await slackNotifier.before();
+    });
+
+    this.nuxt.hook('generate:done', async () => {
+        await slackNotifier.done();
+    });
+}
