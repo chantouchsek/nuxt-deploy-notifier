@@ -1,4 +1,4 @@
-const SlackBuildNotifierModule = require('./SlackBuildNotifierModule');
+const SlackBuildNotifierModule = require('./lib/SlackBuildNotifierModule');
 
 /**
  * Setup the module.
